@@ -18,6 +18,12 @@ class alfred:
         except:
           pass
 
+      if 'owner' in node:
+        try:
+          node_alias['contact'] = str(node['owner']['contact'])
+        except:
+          pass
+
       try:
         node_alias['firmware'] = node['software']['firmware']['release']
       except KeyError:

@@ -9,6 +9,7 @@ class Node():
       "gateway": False,
     })
     self.gps = None
+    self.contact = None
     self.firmware = None
     self.clientcount = 0
     self.lastseen = 0

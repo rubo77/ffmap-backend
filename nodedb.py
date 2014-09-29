@@ -33,6 +33,7 @@ class NodeDB:
                  , 'lastseen': node.lastseen
                  , 'firstseen': node.firstseen
                  , 'geo': node.gps
+                 , 'contact': node.contact
                  })
 
     with open(filename, "w") as f:
@@ -52,6 +53,7 @@ class NodeDB:
             node.name = n['name']
             node.lastseen = n['lastseen']
             node.gps = n['geo']
+            node.contact = n['contact']
             self._nodes.append(node)
 
           if 'firstseen' in n:
