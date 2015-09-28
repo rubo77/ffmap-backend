@@ -10,7 +10,7 @@ wget -q -O json/alfred.158.json "http://vpn0.freifunk.in-kiel.de/alfred.cgi?158"
 wget -q -O json/alfred.159.json "http://vpn0.freifunk.in-kiel.de/alfred.cgi?159"
 wget -q -O json/batman.json "http://vpn0.freifunk.in-kiel.de/batman.cgi"
 
-PATH="$(dirname "$0")/bin:$PATH" ./backend.py -d $DEST --prune 30
+PATH="$(dirname "$0")/bin:$PATH" ./backend.py -d $DEST --prune 15 --vpn de:ad:be:ef:ff:02 de:ad:be:ef:ff:04 de:ad:be:ef:ff:01 de:ad:be:ef:ff:00
 
 # the file blacklist contains long and latitude values, that should be replaced in the form
 # 53.123456, 10.123456/53.456789, 10.456789
