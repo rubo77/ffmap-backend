@@ -6,3 +6,4 @@ nodedb/
 *.pyc
 pycache/
 __pycache__/
+json/*
