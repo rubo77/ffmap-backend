@@ -24,7 +24,8 @@ def prune_nodes(nodes, now, days):
         lastseen = datetime.strptime(node['lastseen'], '%Y-%m-%dT%H:%M:%S')
         delta = (now - lastseen).days
 
-        if delta >= days:
+        
++        if delta >= days or (delta >= 1 and 'your-special-event' in node.get('nodeinfo', {}).get('hostname', '').lower()):
             prune.append(node_id)
 
     for node_id in prune:
