@@ -16,6 +16,12 @@ For the script's regular execution add the following to the crontab:
 
     * * * * * backend.py -d /path/to/output -a /path/to/aliases.json --vpn ae:7f:58:7d:6c:2a d2:d0:93:63:f7:da
 
+Since `nodes.json` is distributed wide openly it is recommended to add some email-contact obfuscation like:
+
+    sed -i -r 's/"contact": "(.*? |)([^@]+)@([^ ]+)( .*?|)"/"contact": "\1\2 at \3\4"/g' /path/to/output/nodes.json
+
+Be crative with the replacement rule or strip emails completely.
+
 # Dependencies
 
 - Python 3
